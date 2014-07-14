@@ -1,8 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="hello.HelloTest" tests="1" skipped="0" failures="0" errors="0" timestamp="2014-07-14T10:16:01" hostname="CNmpang.local" time="0.075">
-  <properties/>
-  <testcase name="sayHelloTest" classname="hello.HelloTest" time="0.075"/>
-  <system-out><![CDATA[2014-07-14 18:16:01,341 >> INFO  >> Test worker >> hello.Hello.sayHello(Hello.java:9) >> An info log message logged using SLF4j
-]]></system-out>
-  <system-err><![CDATA[]]></system-err>
-</testsuite>
