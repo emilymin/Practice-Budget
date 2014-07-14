@@ -9,6 +9,6 @@
 test.txt
 test2.txt
 /mtk/hello.iml
-/mtk/out
-/mtk/build
-/mtk/.gradle
+out
+build
+.gradle
