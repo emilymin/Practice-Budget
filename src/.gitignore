@@ -1,0 +1,13 @@
+################保守设置#####################
+!/plutommi/src
+!/plutommi/src/test/java
+!*.gradle
+
+################开放模式#####################
+/.idea/
+*.iml
+/mtk/hello.iml
+/mtk/build
+/mtk/out
+*.ipr
+*.iws
