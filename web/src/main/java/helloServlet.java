@@ -1,7 +1,4 @@
-package hello;
-
-import org.slf4j.Logger;
-import org.slf4j.LoggerFactory;
+import hello.Hello;
 
 import javax.servlet.ServletException;
 import javax.servlet.http.HttpServlet;
@@ -10,7 +7,8 @@ import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
 import java.io.PrintWriter;
 
-public class Hello extends HttpServlet{
+
+public class helloServlet extends HttpServlet{
 
     public void doGet(HttpServletRequest request,HttpServletResponse response)
             throws ServletException,IOException{
@@ -18,12 +16,10 @@ public class Hello extends HttpServlet{
         response.setContentType("text/html;charset=utf-8");
         PrintWriter out = response.getWriter();
 
-        Logger logger = LoggerFactory.getLogger("Hello.class");
-        logger.info("My name is Emily");
-        logger.info("An info log message logged using SLF4j");
+        Hello hello = new Hello();
+        String output = hello.sayHello();
 
-        out.println("Hello,World!");
+        out.println(output);
         out.close();
-
     }
 }
