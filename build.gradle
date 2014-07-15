@@ -1,1 +1,8 @@
-apply plugin: 'idea'
+allprojects{
+    apply plugin: 'idea'
+
+    repositories {
+        mavenCentral()
+    }
+}
+
