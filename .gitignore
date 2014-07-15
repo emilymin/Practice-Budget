@@ -6,9 +6,11 @@
 ################开放模式#####################
 /.idea/
 *.iml
-test.txt
-test2.txt
+*.ipr
+*.iws
 /mtk/hello.iml
 out
 build
 .gradle
+.DS_Store
+README.md
