@@ -1,4 +1,4 @@
-import hello.NormalCalculator;
+import hello.Client;
 import org.springframework.context.ApplicationContext;
 
 import javax.servlet.ServletException;
@@ -20,14 +20,14 @@ public class DirectServlet extends HttpServlet{
         //ApplicationContext context = new ClassPathXmlApplicationContext("SpringBeans.xml");
         //Client client = new Client();//(Client) context.getBean("clientBean");
 
-        ApplicationContext applicationContext = (ApplicationContext)this.getServletContext().getAttribute("context");
-        NormalCalculator client = (NormalCalculator) applicationContext.getBean("normalCalculator");
+       ApplicationContext applicationContext = (ApplicationContext)this.getServletContext().getAttribute("context");
+       // NormalCalculator client = (NormalCalculator) applicationContext.getBean("normalCalculator");
        // client = (Client) context.getBean("clientBean");
-
-
+        //NormalCalculator normalCalculator = myListener.setNormalCalculator();
+        Client client = (Client)applicationContext.getBean("clientBean");
         String result = "";
         try {
-            result = client.calculate("12", "13");
+            result = client.add("12", "13");
         } catch (Exception e) {
             e.printStackTrace();
         }
