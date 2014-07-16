@@ -1,13 +1,16 @@
 package hello;
 
+import org.springframework.context.ApplicationContext;
+import org.springframework.context.support.ClassPathXmlApplicationContext;
+
 public class Main {
     public static void main(String[] args) throws Exception {
-        NormalCalculator normalCalculator = new NormalCalculator();
-        MathCalculator mathCalculator = new MathCalculator();
-        Client client = new Client();
-        client.setCalculator(normalCalculator);
-        System.out.println(client.add("12","13"));
-        client.setCalculator(mathCalculator);
+
+        ApplicationContext context = new ClassPathXmlApplicationContext(
+                "SpringBeans.xml");
+
+        Client client = (Client) context.getBean("clientBean");
+
         System.out.println(client.add("12","13"));
     }
 }

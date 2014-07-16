@@ -8,7 +8,7 @@ import java.io.IOException;
 import java.io.PrintWriter;
 
 
-public class helloServlet extends HttpServlet{
+public class HelloServlet extends HttpServlet{
 
     public void doGet(HttpServletRequest request,HttpServletResponse response)
             throws ServletException,IOException{

@@ -1,5 +1,8 @@
 apply plugin: 'java'
 
-dependencies {
+dependencies{
+    compile 'org.springframework:spring-webmvc:3.0.3.RELEASE'
+
+
     testCompile group: 'junit', name: 'junit', version: '4.11'
 }
