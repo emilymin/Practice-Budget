@@ -11,7 +11,7 @@ import java.io.PrintWriter;
 
 public class DirectServlet extends HttpServlet{
 
-    public void doGet(HttpServletRequest request,HttpServletResponse response)
+    public void doPost(HttpServletRequest request,HttpServletResponse response)
             throws ServletException,IOException{
 
         response.setContentType("text/html;charset=utf-8");
@@ -26,12 +26,16 @@ public class DirectServlet extends HttpServlet{
         //NormalCalculator normalCalculator = myListener.setNormalCalculator();
         Client client = (Client)applicationContext.getBean("clientBean");
         String result = "";
+
+        String add1 = request.getParameter("add1");
+        String add2 = request.getParameter("add2");
+
         try {
-            result = client.add("12", "13");
+            result = client.add(add1, add2);
         } catch (Exception e) {
             e.printStackTrace();
         }
-
+        out.println(add1);
         out.println(result);
         out.close();
     }
