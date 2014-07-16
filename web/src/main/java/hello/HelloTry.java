@@ -15,13 +15,16 @@ public class HelloTry {
     public Client client;
 
     @RequestMapping(value = "/calculate", method = RequestMethod.GET)
-    public String addNums(Model model, HttpServletRequest request) throws Exception {
-
-        //String result = client.add(request.getParameter("add1").toString(), request.getParameter("add2").toString());
-     //   model.addAttribute(result);
-
+    public String add(Model model, HttpServletRequest request) throws Exception {
         return "index";
     }
 
+    @RequestMapping(value = "/show", method = RequestMethod.POST)
+    public String show(Model model,HttpServletRequest request) throws Exception {
+        String result = client.add(request.getParameter("add1").toString(), request.getParameter("add2").toString());
+        model.addAttribute(result);
+        request.setAttribute("result",result);
 
+        return "show";
+    }
 }
