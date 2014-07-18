@@ -18,6 +18,9 @@
     <bean id="normalCalculator" class="hello.NormalCalculator">
     </bean>
 
+    <bean id="dataSource" class="dataSource">
+    </bean>
+
     <bean
             class="org.springframework.web.servlet.view.InternalResourceViewResolver">
         <property name="prefix">

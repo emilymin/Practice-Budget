@@ -21,9 +21,10 @@ public class QueryController {
     @RequestMapping(value = "/showResult", method = RequestMethod.POST)
     public String showResult(Model model,HttpServletRequest request) throws Exception {
         String result = request.getParameter("id");
-        request.setAttribute("result",result);
-        model.addAttribute(result);
+        Double totalBudget = BudgetQuery.queryCost(result);
+        request.setAttribute("totalBudget",totalBudget);
 
+        model.addAttribute(result);
 
         return "showResult";
     }

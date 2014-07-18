@@ -19,7 +19,7 @@ public class HelloTry {
         return "index";
     }
 
-    @RequestMapping(value = "/show", method = RequestMethod.POST)
+    @RequestMapping(value = "/show", method = RequestMethod.GET)
     public String show(Model model,HttpServletRequest request) throws Exception {
         String result = client.add(request.getParameter("add1").toString(), request.getParameter("add2").toString());
         model.addAttribute(result);
