@@ -9,17 +9,14 @@
 
     <context:component-scan base-package="hello" />
 
-    <bean id="clientBean" class="hello.Client">
+    <!--<bean id="clientBean" class="hello.Client">
     </bean>
 
     <bean id="mathCalculator" class="hello.MathCalculator">
     </bean>
 
     <bean id="normalCalculator" class="hello.NormalCalculator">
-    </bean>
-
-    <bean id="dataSource" class="dataSource">
-    </bean>
+    </bean>-->
 
     <bean
             class="org.springframework.web.servlet.view.InternalResourceViewResolver">

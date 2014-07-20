@@ -1,10 +1,7 @@
 package hello;
 
-import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.beans.factory.annotation.Qualifier;
-
 public class Client {
-    private Calculator calculator;
+    /*private Calculator calculator;
     private String add1;
     private String add2;
 
@@ -24,5 +21,5 @@ public class Client {
 
     public String getAdd2(){
         return this.add2;
-    }
+    }*/
 }

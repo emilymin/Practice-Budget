@@ -19,15 +19,16 @@ public class Staff {
 
     }
 
-    public void setName(String name) {
-        this.name = name;
-    }
+   // public void setName(String name) {
+//        this.name = name;
+//    }
 
     public void setBudgetList(List<Double> budgetList){
         budget.setMyBudget(budgetList);
     }
 
     public Double getTotalBudget(){
+        budget.calculateTotalBudget();
         return budget.getMyTotalBudget();
     }
 }

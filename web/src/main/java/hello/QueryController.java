@@ -12,6 +12,8 @@ public class QueryController {
 
     //@Autowired
    // public Client client;
+//    @Autowired
+//    private BudgetQuery budgetQuery;
 
     @RequestMapping(value = "/query", method = RequestMethod.GET)
     public String query() throws Exception {
@@ -21,10 +23,11 @@ public class QueryController {
     @RequestMapping(value = "/showResult", method = RequestMethod.POST)
     public String showResult(Model model,HttpServletRequest request) throws Exception {
         String result = request.getParameter("id");
-        Double totalBudget = BudgetQuery.queryCost(result);
+        BudgetQuery budgetQuery = new BudgetQuery();
+        Double totalBudget = budgetQuery.queryCost(result);
         request.setAttribute("totalBudget",totalBudget);
 
-        model.addAttribute(result);
+        model.addAttribute(totalBudget);
 
         return "showResult";
     }

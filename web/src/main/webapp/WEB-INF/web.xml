@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<web-app version="2.5"
+<web-app version="3.0"
          xmlns="http://java.sun.com/xml/ns/j2ee"
          xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
          xsi:schemaLocation="http://java.sun.com/xml/ns/j2ee file:/Users/mpang/IdeaProjects/helloWorld/helloWorld.iml">
@@ -17,7 +17,7 @@
 
     <context-param>
         <param-name>contextConfigLocation</param-name>
-        <param-value>classpath:/config/jdbc.xml</param-value>
+        <param-value>classpath:jdbc.xml</param-value>
     </context-param>
 
     <listener>

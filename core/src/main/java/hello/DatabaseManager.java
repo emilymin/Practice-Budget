@@ -3,36 +3,6 @@ package hello;
 import java.sql.*;
 
 public class DatabaseManager {
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
     public static Statement getStatement(Connection conn) {
         Statement stmt = null;
         try {

@@ -3,7 +3,10 @@ apply plugin: 'jetty'
 dependencies{
     compile(
             'javax.servlet:servlet-api:2.5',
-            'org.springframework:spring-webmvc:3.0.3.RELEASE'
+            'org.springframework:spring-webmvc:3.0.3.RELEASE',
+            'c3p0:c3p0:0.9.1.2',
+            'org.apache.tomcat:tomcat-jdbc:8.0.9'
+
     )
     compile project(':core')
 }
