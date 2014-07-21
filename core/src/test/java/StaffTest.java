@@ -22,5 +22,16 @@ public class StaffTest {
         assertEquals(actualMyBudget,myBudget);
 
     }
+
+    @Test
+    public void getMaxBudgetTest(){
+        Staff staff = new Staff();
+        staff.setTimeOfWorking(0.1);
+        Double maxBudget = staff.getMaxBudget();
+        Double actualMaxBudget = 1166.67;
+
+        assertEquals(actualMaxBudget,maxBudget);
+    }
+
 }
 

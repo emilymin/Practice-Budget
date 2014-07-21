@@ -26,12 +26,12 @@ public class BudgetQuery {
         statement = connection.createStatement();
     }
 
-    public String queryTime(String id) throws SQLException {
-        String time = "";
-        String sql = "select * from employee where EmplID = '" + id + "' and (ExpenseType='Books' or ExpenseType='Training/Education');";
+    public Double queryTime(String id) throws SQLException {
+        Double time = 0.0;
+        String sql = "select * from employee where EmplID = '" + id + "';";
         ResultSet result = statement.executeQuery(sql);
         if (result.next()){
-            time = result.getString("YearOfExp");
+            time = result.getDouble("YearOfExp");
         }
     return time;
     }
@@ -57,11 +57,10 @@ public class BudgetQuery {
         return staff.getTotalBudget();
     }
 
-    public void queryMaxCost(String id) throws SQLException {
+    public Double queryMaxBudget(String id) throws SQLException {
         Staff staff = new Staff();
-        staff.setId(id);
-        String time = queryTime(id);
-        //staff.setBudgetList(budget);
-        //staff.getTotalBudget();
+        Double time = queryTime(id);
+        staff.setTimeOfWorking(time);
+        return staff.getMaxBudget();
     }
 }

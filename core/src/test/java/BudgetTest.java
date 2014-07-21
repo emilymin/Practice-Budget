@@ -21,4 +21,14 @@ public class BudgetTest {
 
          assertEquals(actualMyBudget,myBudget);
      }
+
+    @Test
+    public void getMaxBudgetTest(){
+        Budget budget = new Budget();
+        budget.calculateMaxBudget(0.1);
+       Double maxBudget = budget.getMyMaxBudget();
+        Double actualMaxBudget = 1166.67;
+
+        assertEquals(actualMaxBudget,maxBudget);
+    }
 }

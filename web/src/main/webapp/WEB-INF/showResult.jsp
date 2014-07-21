@@ -1,1 +1,1 @@
-${totalBudget}
+${totalBudget}</br>${maxBudget}

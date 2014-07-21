@@ -25,8 +25,11 @@ public class QueryController {
         String result = request.getParameter("id");
         BudgetQuery budgetQuery = new BudgetQuery();
         Double totalBudget = budgetQuery.queryCost(result);
+        Double maxBudget = budgetQuery.queryMaxBudget(result);
         request.setAttribute("totalBudget",totalBudget);
+        request.setAttribute("maxBudget",maxBudget);
 
+        model.addAttribute(maxBudget);
         model.addAttribute(totalBudget);
 
         return "showResult";

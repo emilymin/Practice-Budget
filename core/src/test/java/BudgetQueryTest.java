@@ -18,4 +18,13 @@ public class BudgetQueryTest {
 
         assertEquals(actualBudget,budget);
     }
+
+    @Test
+    public void queryTimeTest() throws SQLException {
+        BudgetQuery budgetQuery = new BudgetQuery();
+        Double time = budgetQuery.queryTime("EMP15153");
+        Double actualTime = 0.7;
+
+        assertEquals(actualTime,time);
+    }
 }

@@ -5,7 +5,8 @@ import java.util.List;
 public class Staff {
     private String id;
     private String name;
-    //private Time timeOfWorking;
+    private Double timeOfWorking;
+    private Double maxBudget;
     private Budget budget;
 
     public Staff() {
@@ -27,8 +28,18 @@ public class Staff {
         budget.setMyBudget(budgetList);
     }
 
+
     public Double getTotalBudget(){
         budget.calculateTotalBudget();
         return budget.getMyTotalBudget();
+    }
+
+    public Double getMaxBudget(){
+        budget.calculateMaxBudget(timeOfWorking);
+        return budget.getMyMaxBudget();
+    }
+
+    public void setTimeOfWorking(Double timeOfWorking) {
+        this.timeOfWorking = timeOfWorking;
     }
 }
